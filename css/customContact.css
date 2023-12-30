@@ -1,0 +1,287 @@
+@charset "utf-8";
+/* My custom CSS for the Bootstrap Site, overriding existing styles */
+
+:root {
+  --mainFont: 'Italiana';
+  --secondMainFont: 'Montserrat';
+}
+
+body {
+    background-color: #000;
+}
+
+/* Top Navigation Bar */
+.navbar {
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1040;
+    padding-top: 0;
+    transition: top 0.3s;
+}
+
+.black-background {
+    background-color: black;
+}
+
+.navbar-initial {
+    font-size: 1.8rem;
+    font-family: var(--mainFont);
+    text-decoration: none;
+    color: #fff;
+    z-index: 1060;
+}
+
+.navbar .navbar-toggler {
+    border: none; 
+    outline: none;
+    box-shadow: none;
+    z-index: 1060;
+}
+
+.navbar .navbar-toggler .fa-bars {
+    color: #fff;
+}
+
+.navbar-nav .nav-item {
+    margin-right: 0;
+}
+
+.navbar-nav .nav-item:not(:last-child) {
+    margin-right: 30px;
+}
+
+.navbar-nav .nav-link {
+    font-family: var(--secondMainFont);
+    color: #fff;
+}
+
+.navbar-initial, .navbar-nav .nav-link {
+    transition: color 0.3s ease;
+}
+
+.navbar-initial:hover, .navbar-nav .nav-link:hover {
+    color: #909090;
+}
+
+.veggie-menu span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px auto;
+    transition: background-color 0.1s ease, transform 0.3s ease;
+}
+
+.veggie-menu.open .burger-top {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.veggie-menu.open .burger-middle {
+    opacity: 0;
+}
+
+.veggie-menu.open .burger-bottom {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
+@media (max-width: 992px) {
+    .navbar-collapse {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: none;
+        background-color: #000;
+        z-index: 1030;
+        overflow: hidden;
+        transition: transform 0.5s ease-in-out;
+        transform: translateY(-100%);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 130px 0;
+    }
+
+    .navbar-nav {
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar-nav .nav-item {
+        width: 100%;
+    }
+
+    .navbar-nav .nav-link {
+        font-family: var(--secondMainFont);
+        color: #fff;
+        font-size: 80px;
+        padding: 20px 15px;
+    }
+
+    .navbar-collapse.collapsing {
+        height: auto;
+        transition: transform 0.5s ease;
+    }
+
+    .navbar-collapse.show {
+        transform: translateY(0);
+    }
+}
+
+.stop-scrolling {
+    overflow: hidden;
+}
+
+/* Contact Container */
+.contact-container {
+    margin-top: 250px;
+}
+
+.header-section .title-line {
+    border: none;
+    height: 2px;
+    width: 75px;
+    background-color: #fff;
+}
+
+.header-section .title {
+    font-family: 'Italiana';
+    font-size: 4rem;
+    letter-spacing: 7px;
+    color: #fff;
+}
+
+.contact-container .sub-title-content {
+    margin-left: 120px;
+}
+
+.contact-container .work-togehter-text {
+    margin-bottom: 210px;
+}
+
+.contact-container .work-togehter-text .fw-bolder{
+    font-family: var(--mainFont);
+    font-size: 2rem;
+    letter-spacing: 7px;
+    color: #fff;
+}
+
+.contact-container .work-togehter-text span{
+    font-family: var(--mainFont);
+    font-size: 2rem;
+    letter-spacing: 7px;
+    color: #909090;
+}
+
+.social-icons {
+    font-size: 2.5rem;
+}
+
+.icon-link {
+    color: #fff;
+    text-decoration: none;
+}
+
+.email-section {
+    transition: transform 0.3s ease;
+}
+
+.email-link {
+    font-family: var(--secondMainFont);
+    font-size: 1.5rem;
+    color: #fff;
+    text-decoration: none;
+}
+
+.icon-link {
+    transition: transform 0.3s ease;
+}
+
+.email-section:hover, .icon-link:hover {
+    transform: translateY(-5px);
+}
+
+/* Contact-form */
+.contact-form {
+    margin-top: 30px;
+    margin-left: 120px;
+    margin-right: 86.281px;
+}
+
+.contact-form .input {
+    margin-bottom: 76px;
+}
+
+.contact-form .form-control {
+    font-family: var(--secondMainFont);
+    font-size: 1rem;
+    color: #fff;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #5C5C5C;
+    border-radius: 0;
+}
+
+.contact-form .form-control::placeholder {
+    color: #fff;
+}
+
+.contact-form .form-control:focus {
+    box-shadow: none;
+    border-color: #fff;
+}
+
+.custom-see-more-btn {
+    font-family: 'Montserrat';
+    background-color: #fff;
+    color: #000;
+    padding: 10px 30px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.custom-see-more-btn:hover {
+    background-color: #909090;
+    color: #000;
+}
+
+@media (max-width: 992px) {
+    
+    .contact-container .info-container {
+        margin-bottom: 100px;
+    }
+    
+    .social-icons {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-container .work-togehter-text {
+        margin-bottom: 48px;
+    }
+    
+    .social-icons {
+        font-size: 2rem;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fadeInUp {
+    animation-name: fadeInUp;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}

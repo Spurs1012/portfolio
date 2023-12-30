@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+<head>
+    <title>Portfolio Contact</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/customContact.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Italiana" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vSIIfh2fBefowPI8/yn9mC7oQ9wTevatey5Hc8b4Mehxv0aV9Qen/aHvhPjLhbbX" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/customContact.js"></script>
+</head>
+<body>
+    
+    <!-- Top Navigation -->
+    <nav class="navbar navbar-expand-lg" id="mainNavbar">
+        <div class="container-fluid mt-3 px-5">
+            <!-- Brand on the left side --> 
+            <a class="navbar-initial" href="index.html">HP.</a>
+
+            <!-- Hamburger menu toggle button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <div class="veggie-menu">
+                    <span class="burger-top"></span>
+                    <span class="burger-middle"></span>
+                    <span class="burger-bottom"></span>
+                </div>
+            </button>
+
+            <!-- Main navigation on the right side -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Works</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Centered Contact Container -->
+    <div class="container-fluid mb-5 contact-container">
+        <div class="row container-fluid mb-5 px-0 header-section">
+            <div class="col-12 d-flex align-items-start align-items-center">
+                <div class="title-line me-3"></div>
+                <h1 class="fw-bold mb-0 title">CONTACT</h1>
+            </div>
+        </div>
+        <div class="row">
+            <!-- Left Side -->
+            <div class="col-md-6 px-0 left-side fadeInUp">
+                <div class="sub-title-content">
+                    <div class="work-togehter-text">
+                        <h1 class="fw-bolder">Let's Work Together<br><span>Get in touch.</span></h1>
+                    </div>
+                    <div class="info-container mt-2">
+                        <div class="email-section mb-3">
+                            <a href="mailto:sirisakhill@gmail.com" class="email-link">sirisakhill@gmail.com</a>
+                        </div>
+                        <div class="social-icons">
+                            <a href="your-linkedin-url" class="icon-link me-3">
+                                <i class="fa-brands fa-linkedin"></i>
+                            </a>
+                            <a href="your-github-url" class="icon-link">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side -->
+            <div class="col-md-6 px-0 right-side fadeInUp">
+                <div class="contact-form my-0">
+                    <form>
+                        <div class="input">
+                            <input type="text" class="form-control" id="name" placeholder="Name">
+                        </div>
+                        <div class="input">
+                            <input type="email" class="form-control" id="email" placeholder="Email">
+                        </div>
+                        <div class="input">
+                            <input type="text" class="form-control" id="message" placeholder="Message">
+                        </div>
+                        <button class="btn fw-bolder custom-see-more-btn">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

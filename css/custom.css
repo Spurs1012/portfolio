@@ -1,0 +1,426 @@
+@charset "utf-8";
+/* My custom CSS for the Bootstrap Site, overriding existing styles */
+
+:root {
+  --mainFont: 'Italiana';
+  --secondMainFont: 'Montserrat';
+}
+
+body {
+    background-color: #000;
+    margin-bottom: 547px;
+}
+
+/* Top Navigation Bar */
+.navbar {
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1040;
+    padding-top: 0;
+    transition: top 0.3s;
+}
+
+.black-background {
+    background-color: black;
+}
+
+.navbar-initial {
+    font-size: 1.8rem;
+    font-family: var(--mainFont);
+    text-decoration: none;
+    color: #fff;
+    z-index: 1060;
+}
+
+.navbar .navbar-toggler {
+    border: none; 
+    outline: none;
+    box-shadow: none;
+    z-index: 1060;
+}
+
+.navbar .navbar-toggler .fa-bars {
+    color: #fff;
+}
+
+.navbar-nav .nav-item {
+    margin-right: 0;
+}
+
+.navbar-nav .nav-item:not(:last-child) {
+    margin-right: 30px;
+}
+
+.navbar-nav .nav-link {
+    font-family: var(--secondMainFont);
+    color: #fff;
+}
+
+.navbar-initial, .navbar-nav .nav-link {
+    transition: color 0.3s ease;
+}
+
+.navbar-initial:hover, .navbar-nav .nav-link:hover {
+    color: #909090;
+}
+
+.veggie-menu span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px auto;
+    transition: background-color 0.1s ease, transform 0.3s ease;
+}
+
+.veggie-menu.open .burger-top {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.veggie-menu.open .burger-middle {
+    opacity: 0;
+}
+
+.veggie-menu.open .burger-bottom {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
+@media (max-width: 992px) {
+    .navbar-collapse {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: none;
+        background-color: #000;
+        z-index: 1030;
+        overflow: hidden;
+        transition: transform 0.5s ease-in-out;
+        transform: translateY(-100%);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 130px 0;
+    }
+
+    .navbar-nav {
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar-nav .nav-item {
+        width: 100%;
+    }
+
+    .navbar-nav .nav-link {
+        font-family: var(--secondMainFont);
+        color: #fff;
+        font-size: 80px;
+        padding: 20px 15px;
+    }
+
+    .navbar-collapse.collapsing {
+        height: auto;
+        transition: transform 0.5s ease;
+    }
+
+    .navbar-collapse.show {
+        transform: translateY(0);
+    }
+}
+
+.stop-scrolling {
+    overflow: hidden;
+}
+
+.main-content {
+    background-color: #000;
+    padding-bottom: 200px;
+    padding-top: 250px;
+}
+
+.vertical-divider {
+    border-left: 1px solid #fff;
+    height: 100px;
+    margin: 50px auto;
+}
+
+.brief_Description .hello {
+    font-family: var(--mainFont);
+    font-size: 1.5rem;
+    letter-spacing: 7px;
+    color: #909090;
+}
+
+.brief_Description .content h1 {
+    font-family: var(--mainFont);
+    font-size: 3rem;
+    letter-spacing: 7px;
+    color: #fff;
+}
+
+.brief_Description .fw-lighter {
+    color: #909090;
+}
+
+.brief_Description {
+    opacity: 0;
+    animation: fadeInUp 1s ease forwards;
+}
+
+.animate-brief {
+    animation: fadeInUp 1s ease forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fadeInUp {
+    animation-name: fadeInUp;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.work_HomeChef, .vertical-divider {
+    animation: fadeInUp 1s ease forwards;
+    opacity: 0;
+}
+
+.work_HomeChef.animate, .vertical-divider.animate {
+    animation: fadeInUp 1s ease forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fadeInUp {
+    animation-name: fadeInUp;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.work_HomeChef, .work_CSA, .work_PureRoaming {
+    opacity: 0;
+}
+
+.work_HomeChef, 
+.work_CSA {
+    height: auto;
+    margin-bottom: 200px;
+}
+
+.work_HomeChef .row,
+.work_CSA .row {
+    background-color: #000;
+    height: auto;
+}
+
+.work_PureRoaming .descriptions-container .sub-title,
+.work_CSA .descriptions-container .sub-title,
+.work_HomeChef .descriptions-container .sub-title {
+    font-family: var(--secondMainFont);
+    color: #909090;
+}
+
+.work_PureRoaming .descriptions-container .title h1,
+.work_CSA .descriptions-container .title h1,
+.work_HomeChef .descriptions-container .title h1 {
+    font-family: var(--mainFont);
+    font-size: 3rem;
+    letter-spacing: 7px;
+    color: #fff;
+}
+
+.work_PureRoaming .descriptions-container .description h2,
+.work_CSA .descriptions-container .description h2,
+.work_HomeChef .descriptions-container .description h2 {
+    font-family: var(--secondMainFont);
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    color: #909090;
+}
+
+.image-container {
+    overflow: hidden;
+}
+
+.zoom-effect {
+    transition: transform 1s ease;
+}
+
+.zoom-effect:hover {
+    transform: scale(1.1);
+}
+
+.custom-see-more-btn {
+    font-family: var(--secondMainFont);
+    background-color: #fff;
+    color: #000;
+    padding: 10px 30px;
+    font-size: 1.1rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.custom-see-more-btn:hover {
+    background-color: #909090;
+    color: #000;
+}
+
+.custom-see-more-btn i {
+    margin-left: 5px;
+    transition: transform 0.3s ease;
+}
+
+.custom-see-more-btn:hover i {
+    transform: translateX(10px);
+}
+
+.smaller-image {
+    max-width: 100%;
+    height: auto;
+}
+
+/* footer */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    background-color: #fff;
+    padding: 50px 0;
+}
+
+footer .work-togehter-text .fw-bolder{
+    font-family: var(--mainFont);
+    font-size: 6.6rem;
+    color: #000;
+}
+
+footer .work-togehter-text span{
+    font-family: var(--mainFont);
+    font-size: 6.6rem;
+    color: #909090;
+}
+
+.footer-content {
+    text-align: left;
+}
+
+.lines {
+    margin-top: 20px;
+}
+
+.line-long, .line-short {
+    height: 3px;
+    background-color: #000;
+}
+
+.line-long {
+    width: 10%;
+    margin: 20px 0;
+}
+
+.line-short {
+    width: 10%;
+    margin: 20px 100px;
+}
+
+.social-icons {
+    font-size: 2.5rem;
+}
+
+.icon-link {
+    color: #000;
+    text-decoration: none;
+}
+
+.email-section {
+    transition: transform 0.3s ease;
+}
+
+.email-link {
+    font-family: var(--secondMainFont);
+    font-size: 2rem;
+    color: #000;
+    text-decoration: none;
+}
+
+.icon-link {
+    transition: transform 0.3s ease;
+}
+
+.email-section:hover, .icon-link:hover {
+    transform: translateY(-5px);
+}
+
+@media (max-width: 992px) {
+    footer .work-togehter-text .fw-bolder{
+    font-family: var(--mainFont);
+    font-size: 4.9rem;
+    color: #000;
+    }
+
+    footer .work-togehter-text span{
+        font-family: var(--mainFont);
+        font-size: 4.9rem;
+        color: #000;
+    }
+    
+    .email-section {
+        font-family: var(--secondMainFont);
+        font-size: 1.8rem;
+        color: #000;
+    }
+    
+    .social-icons {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    footer .work-togehter-text .fw-bolder{
+    font-family: var(--mainFont);
+    font-size: 3.7rem;
+    color: #000;
+    }
+
+    footer .work-togehter-text span{
+        font-family: var(--mainFont);
+        font-size: 3.7rem;
+        color: #000;
+    }
+    
+    .email-section {
+        font-family: var(--secondMainFont);
+        font-size: 1.5rem;
+        color: #000;
+    }
+    
+    .social-icons {
+        font-size: 2rem;
+    }
+}
