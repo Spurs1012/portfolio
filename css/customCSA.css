@@ -572,6 +572,15 @@ body {
     transition: color 0.2s, transform 0.2s;
 }
 
+/* Usability Testing Current
+.usability-testing-current-content h1 {
+    font-family: var(--secondMainFont);
+    font-size: 2em;
+    font-weight: 700;
+    line-height: 1.8rem;
+    color: #000;
+} */
+
 /* More Works */
 .more-works-section hr {
     border-top: 1px solid #000;
