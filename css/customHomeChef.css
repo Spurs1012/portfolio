@@ -170,6 +170,7 @@ body {
     font-size: 6.4rem;
     letter-spacing: 7px;
     color: #fff;
+    word-wrap: normal;
 }
 
 .hero-section .sub-title h2{
@@ -285,6 +286,9 @@ body {
         font-size: 0.8rem;
         color: #fff;
         margin: 0;
+    }
+    .hero-section .title .title-break {
+        display: block;
     }
 }
 
