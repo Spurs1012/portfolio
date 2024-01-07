@@ -150,14 +150,14 @@ body {
 
 .brief_Description .hello {
     font-family: var(--mainFont);
-    font-size: 1.5rem;
+    font-size: 2rem;
     letter-spacing: 7px;
     color: #909090;
 }
 
 .brief_Description .content h1 {
     font-family: var(--mainFont);
-    font-size: 3rem;
+    font-size: 3.8rem;
     letter-spacing: 7px;
     color: #fff;
 }
